@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    display: flex;
+    width: 100%;
+}
+
+#root{
+    position: relative !important;
+    background: linear-gradient(90deg, rgb(177, 95, 255),rgb(5, 197, 231));
+    width: 100%;
+    min-height: 100vh;
+}
+
+.navoptions{
+    display: flex;
+    width: 100%;
+    background-color: #444444;
+}
+
+.navoptions button{
+    width: 100%;
+    margin: 0;
+    background-color: transparent;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    color: #FFF;
+}
+
+.navoptions button:hover{
+    background-color: rgba(0,0,0,0.3);
+}
+
+
+.forms{
+    background-color: rgba(255,255,255,0.6);
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.forms .title{
+    text-align: center;
+    margin: 10px auto;
+    color: #444;
+    font-weight: bolder;
+}
+
+.forms input{
+    margin: 5px 5px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid #888;
+}
+
+.forms button{
+    margin: 5px 5px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid #FFF;
+    color: #FFF;
+    background-color: #5353d6;
+}
+
+.forms button:hover{
+    margin: 5px 5px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid #FFF;
+    color: #FFF;
+    background-color: #4343aa;
+}
+
+.forms .content-books{    
+    display: flex;  
+    flex-direction: row;  
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.forms .content-books .book{
+    background-color: #d8d8d8;
+    color: #505050;
+    text-align: center;
+    margin: 5px auto;
+    width: 100%;
+    max-width: 100px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid#ffffff;
+    box-shadow: 2px 2px 2px #444;
+}
+
+.forms .content-books .book h2,
+.forms .content-books .book h3,
+.forms .content-books .book h4,
+.forms .content-books .book h5,
+.forms .content-books .book h6{
+    margin: 4px auto;
+}
+
+.forms .content-books .book .tituloLibro{
+    color: tomato;
+    margin: 6px auto;
+}
+
+.error-notice {
+    position: fixed;
+    right: 30px;
+    top: 60px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 300px;
+    align-items: center;
+    padding: 8px;
+    border: 1px solid #ff8787;
+    background-color: #ff6c6c;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #FFF;
+}
+
+.error-notice button{
+    background-color: transparent;
+    font-weight: bolder;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: #FFF;
+    border: 1px solid #FFF;
+    padding: 0 0 1px 0;
+}
