@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Axios from 'axios';
+import Header from './components/Header/Header';
 import NavOptions from './components/nav/NavOptions';
 import Consultar from './components/pages/Consultar';
 import Prestar from './components/pages/Prestar';
@@ -14,7 +15,8 @@ export default function App() {
     return <>
         <BrowserRouter>
             <NavOptions></NavOptions>
-            <div className='container'>
+            <Header></Header>            
+            <div>
                 <Switch>
                     <Route exact path='/' component={Consultar}/>
                     <Route exact path='/prestar' component={Prestar}/>

@@ -16,30 +16,45 @@ body{
     min-height: 100vh;
 }
 
+header{
+    display: flex;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+header h1{
+    text-transform: uppercase;
+    margin: auto;
+    color: #FFF;
+    text-shadow: 2px 2px 2px #333;
+}
+
 .navoptions{
     display: flex;
     width: 100%;
-    background-color: #444444;
+    background: linear-gradient(45deg, #444, #555, #444);
 }
 
 .navoptions button{
     width: 100%;
     margin: 0;
     background-color: transparent;
-    padding: 10px;
+    padding: 20px 10px;
     border: none;
     cursor: pointer;
     color: #FFF;
+    border: 1px solid rgb(117, 117, 117);
+    border-top: unset;
+    text-transform: uppercase;
 }
 
 .navoptions button:hover{
     background-color: rgba(0,0,0,0.3);
 }
 
-
 .forms{
     background-color: rgba(255,255,255,0.6);
-    margin: 40px auto;
+    margin: 30px auto;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -52,11 +67,19 @@ body{
     text-align: center;
     margin: 10px auto;
     color: #444;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.forms span{
+    margin: 0 20px;
+    font-size: 13px;
     font-weight: bolder;
 }
 
 .forms input{
     margin: 5px 5px;
+    margin-bottom: 20px;
     padding: 5px;
     border-radius: 8px;
     border: 1px solid #888;
@@ -113,24 +136,25 @@ body{
     margin: 6px auto;
 }
 
-.error-notice {
+.error-notice, .success-notice {
     position: fixed;
     right: 30px;
     top: 60px;
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 300px;
+    max-width: 400px;
     align-items: center;
-    padding: 8px;
+    padding: 10px;
     border: 1px solid #ff8787;
     background-color: #ff6c6c;
     border-radius: 8px;
     font-size: 14px;
     color: #FFF;
+    font-weight: bold;
 }
 
-.error-notice button{
+.error-notice button, .success-notice button{
     background-color: transparent;
     font-weight: bolder;
     width: 20px;
@@ -139,4 +163,10 @@ body{
     color: #FFF;
     border: 1px solid #FFF;
     padding: 0 0 1px 0;
+    font-weight: normal;
+}
+
+.success-notice{
+    border: 1px solid #00eb7d;
+    background-color: #01a833;
 }
