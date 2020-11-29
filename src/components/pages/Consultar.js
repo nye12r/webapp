@@ -34,7 +34,7 @@ export default function Consultar() {
         } catch (err) {
             console.log(err);
             setSuccess(undefined);
-            setError('No fue posible crear el libro');
+            setError('No se encontraron libros');
         }
     };
 

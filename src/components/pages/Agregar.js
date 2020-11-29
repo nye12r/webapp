@@ -13,16 +13,18 @@ export default function Consultar() {
 
     const onSubmit = async (data) => {
         try {
-            console.log(data);  
-                  
-            // const res = await Axios.post(
-            //      'http://localhost:8080/crear',
-            //      data 
-            // );
-            // console.log(res);            
-            setError(undefined);
-            setSuccess('El libro se ha almacenado correctamente');
-            reset();
+            let res = await Axios.post(
+                'http://localhost:8080/crearLibro',
+                data
+            );
+            if(res.data.estado === 'OK'){  
+                setError(undefined);
+                setSuccess(res.data.mensaje);
+                reset();             
+            }else{
+                setSuccess(undefined);
+                setError('No fue posible crear el libro');
+            }
         } catch (err) {
             console.log(err);
             setSuccess(undefined);
@@ -31,7 +33,7 @@ export default function Consultar() {
     };
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)} autoComplete='off'>
             {error && (
                 <ErrorNotice message={error} clearNotice={() => setError(undefined)} />
             )}

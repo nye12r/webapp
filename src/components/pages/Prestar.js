@@ -14,18 +14,22 @@ export default function Consultar() {
         try {
             console.log(data);  
                   
-            // const res = await Axios.post(
-            //      'http://localhost:8080/crear',
-            //      data 
-            // );
-            // console.log(res);            
-            setError(undefined);
-            setSuccess('El libro se ha almacenado correctamente');
-            reset();
+            let res = await Axios.post(
+                'http://localhost:8080/prestar',
+                data
+            );
+            if(res.data.estado === 'OK'){  
+                setError(undefined);
+                setSuccess(res.data.mensaje);
+                reset();             
+            }else{
+                setSuccess(undefined);
+                setError('No fue posible prestar el libro');
+            }
         } catch (err) {
             console.log(err);
             setSuccess(undefined);
-            setError('No fue posible crear el libro');
+            setError('No fue posible realizar el prestamo');
         }      
     };
 
@@ -40,9 +44,9 @@ export default function Consultar() {
             <div className='forms'>
                 <label className='title'>Prestar</label>
                 <span>ISBN</span>
-                <input ref={register} name={'ISBN'} type='text' placeholder='Ingresar ISBN' required={true}/>
+                <input ref={register} name={'isbn'} type='text' placeholder='Ingresar ISBN' required={true}/>
                 <span>Nombre del cliente</span>
-                <input ref={register} name={'nomCliente'} type='text' placeholder='Ingresar nombre del cliente'/>
+                <input ref={register} name={'persona'} type='text' placeholder='Ingresar nombre del cliente'/>
                 <button>Aceptar</button>
             </div>            
         </form>
