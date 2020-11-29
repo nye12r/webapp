@@ -26,13 +26,11 @@ export default function Consultar() {
             }         
         } catch (err) {
             console.log(err);
-            setSuccess(undefined);
-            setError('No se encontraron libros');
         }
     };
 
     return (
-        <form autocomplete='off'>
+        <form>
             {error && (
                 <ErrorNotice message={error} clearNotice={() => setError(undefined)} />
             )}
@@ -48,7 +46,7 @@ export default function Consultar() {
                                 <h2 className='tituloLibro'>{elem.isbn}</h2>
                                 <h4>{elem.nombreLibro}</h4>   
                                 <h6>Cliente: {elem.nombrePersona}</h6>                         
-                                <h6>Dev: {elem.fechaLimite}</h6>
+                                <h6>Dev: {elem.fechaLimite?elem.fechaLimite.substring(0,10):null}</h6>
                             </div>
                         })
                     ):(

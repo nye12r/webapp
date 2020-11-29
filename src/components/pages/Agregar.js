@@ -26,9 +26,9 @@ export default function Consultar() {
                 setError('No fue posible crear el libro');
             }
         } catch (err) {
-            console.log(err);
+            console.log(err.response.data);
             setSuccess(undefined);
-            setError('No fue posible crear el libro');
+            setError(err.response.data);
         }
     };
 

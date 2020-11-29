@@ -17,6 +17,7 @@ export default function Consultar() {
                 'http://localhost:8080/prestar',
                 data
             );
+            console.log(res)
             if(res.data.estado === 'OK'){  
                 setError(undefined);
                 setSuccess(res.data.mensaje);
@@ -26,9 +27,9 @@ export default function Consultar() {
                 setError('No fue posible prestar el libro');
             }
         } catch (err) {
-            console.log(err);
+            console.log(err.response.data);
             setSuccess(undefined);
-            setError('No fue posible realizar el prestamo');
+            setError(err.response.data);
         }      
     };
 

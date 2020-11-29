@@ -87,7 +87,7 @@ header h1{
     padding: 5px;
     border-radius: 8px;
     border: 1px solid #888;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 
 .forms input::placeholder{
@@ -138,6 +138,7 @@ header h1{
 .forms .content-books .book h5,
 .forms .content-books .book h6{
     margin: 4px auto;
+    /* text-transform: uppercase; */
 }
 
 .forms .content-books .book .tituloLibro{
