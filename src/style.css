@@ -63,6 +63,10 @@ header h1{
     border-radius: 8px;
 }
 
+.forms-books{
+    max-width: 800px;
+}
+
 .forms .title{
     text-align: center;
     margin: 10px auto;

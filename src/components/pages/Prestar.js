@@ -12,8 +12,6 @@ export default function Consultar() {
 
     const onSubmit = async (data) => {
         try {
-            console.log(data);  
-                  
             let res = await Axios.post(
                 'http://localhost:8080/prestar',
                 data
