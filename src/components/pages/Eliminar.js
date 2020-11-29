@@ -36,7 +36,7 @@ export default function Consultar() {
     };
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)} autocomplete='off'>
             {error && (
                 <ErrorNotice message={error} clearNotice={() => setError(undefined)} />
             )}

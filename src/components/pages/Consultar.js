@@ -22,7 +22,7 @@ export default function Consultar() {
             }else{
                 setLibros([]);
                 setSuccess(undefined);
-                setError('No se encontraron libros');
+                setError(undefined);
             }         
         } catch (err) {
             console.log(err);
@@ -32,7 +32,7 @@ export default function Consultar() {
     };
 
     return (
-        <form>
+        <form autocomplete='off'>
             {error && (
                 <ErrorNotice message={error} clearNotice={() => setError(undefined)} />
             )}
