@@ -45,8 +45,7 @@ export default function Consultar() {
                     { libros && libros.length > 0 ?(
                         libros.map((elem, idx) => {
                             return <div className='book' key={idx}>
-                                <h2 className='tituloLibro'>LIBRO</h2>
-                                <h5>{elem.isbn}</h5>
+                                <h2 className='tituloLibro'>{elem.isbn}</h2>
                                 <h4>{elem.nombreLibro}</h4>   
                                 <h6>Cliente: {elem.nombrePersona}</h6>                         
                                 <h6>Dev: {elem.fechaLimite}</h6>
